@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --main-fnt: 'Poppins', sans-serif;
+    /* --sub-fnt:'Raleway', sans-serif; */
+    /* --cyn: #00FFF7;
+    --pnk: #FF0077; */
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #222;
+    font-family: var(--main-fnt);
+    color: #fff;
+    background-image: url(/img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+.card {
+    background: rgba(0, 0, 0, 0.787);
+    padding: 1.5em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    margin: 15px;
+}
+.search {
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+input.search-bar {
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    outline: none;
+    box-shadow: none;
+    width: calc(100% - 70px);
+    padding: 10px;
+    background-color: #7c7c7c6b;
+    color: rgb(223, 223, 223);
+}
+
+button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    margin-left: 5px;
+    outline: none;
+    color: rgb(214, 214, 214);
+    cursor: pointer;
+    background-color: #8f8f8f6b;
+    transition: 0.3s ease-in-out;
+    
+}
+button:hover {
+    background-color: #8f8f8fc9;
+    transform: rotate(360deg);
+}
+.weather {
+    letter-spacing: .05em;
+    font-weight: 100;
+}
+h2.city {
+    font-size: 150%;
+    font-weight: 100;
+}
+
+h1.temp {
+    margin: 0;
+    font-size: 250%;
+    font-weight: 100;
+}
+.description, .humidity, .windspeed {
+    margin: 5px;
+}
+.description {
+    text-transform: capitalize;
+}
+.flexbox {
+    display: flex;
+    align-items: center;
+}
+
+.weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+.weather.loading:after {
+    visibility: visible;
+    content: "Loading...";
+    color: white;
+    position:absolute;
+    top: 10%;
+    left: 40%;
+}
