@@ -24,6 +24,7 @@ body {
     background-size: cover;
     background-position: right;
     padding: 10px;
+    overflow : hidden;
 }
 .card {
     padding: 1.5em;
