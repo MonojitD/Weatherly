@@ -1,7 +1,9 @@
 let weather = {
-    apikey : "17265f1e3b1745f470c1f34c7f772642",
+    // apikey : "17265f1e3b1745f470c1f34c7f772642",
+    apikey : "44838088-11122b5211bf63fd3b42b1e23",
     fetchWeather : function (city) {
-        fetch ("https://api.openweathermap.org/data/2.5/weather?q="+ city +"&units=metric&appid="+ this.apikey)
+        // fetch ("https://api.openweathermap.org/data/2.5/weather?q="+ city +"&units=metric&appid="+ this.apikey)
+        fetch ("https://pixabay.com/api/?key= + this.apikey + &q= + city + &image_type=photo")
         .then((response) => {
             return response.json();
         })
